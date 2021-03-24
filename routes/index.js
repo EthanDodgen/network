@@ -4,11 +4,11 @@ const apiRoutes = require('./api/user-routes')
 
 
 // add prefix of `/api` to all of the api routes imported from the `api` directory
-router.use('/api', apiRoutes)
+router.use('/api/user', apiRoutes)
 
 
-// router.use((req, res) => {
-//   res.status(404).send('<h1>😝 404 Error!</h1>')
-// })
+router.use((req, res) => {
+  res.status(404).send('<h1>😝 404 Error!</h1>')
+})
 
 module.exports = router
